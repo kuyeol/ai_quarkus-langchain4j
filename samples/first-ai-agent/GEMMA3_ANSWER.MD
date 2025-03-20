@@ -219,3 +219,193 @@ class Graph {
 * 온라인 저지 사이트(백준, 프로그래머스)
 
 더 궁금한 점이나 구체적인 알고리즘에 대한 질문이 있으시면 언제든지 물어봐주세요!
+
+
+
+---
+
+
+ChatResponse { aiMessage = AiMessage { text = "Okay, let's break down Java stack algorithms.  A stack is a fundamental data structure that follows the Last-In, First-Out (LIFO) principle.  Think of it like a stack of plates – you add (push) new plates to the top, and you remove (pop) plates from the top.
+
+**1. What is a Stack?**
+
+* **Definition:** A stack is a linear data structure that operates on the principle of LIFO.
+* **Operations:**
+  * **push(element):** Adds an element to the top of the stack.
+  * **pop():** Removes and returns the element at the top of the stack.
+  * **peek() / top():** Returns the element at the top of the stack without removing it.
+  * **isEmpty():** Checks if the stack is empty.
+  * **size():** Returns the number of elements in the stack.
+
+**2. Implementing a Stack in Java**
+
+You can implement a stack using an array or a linked list.  Let's look at both approaches:
+
+**a) Stack using an Array:**
+
+```java
+public class ArrayStack {
+    private int[] stackArray;
+    private int top; // Index of the top element
+    private int capacity;
+
+    public ArrayStack(int capacity) {
+        this.capacity = capacity;
+        stackArray = new int[capacity];
+        top = -1; // Initially empty
+    }
+
+    public void push(int element) {
+        if (isFull()) {
+            System.out.println("Stack Overflow");
+            return;
+        }
+        top++;
+        stackArray[top] = element;
+    }
+
+    public int pop() {
+        if (isEmpty()) {
+            System.out.println("Stack Underflow");
+            return -1; // Or throw an exception
+        }
+        int element = stackArray[top];
+        top--;
+        return element;
+    }
+
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return -1; // Or throw an exception
+        }
+        return stackArray[top];
+    }
+
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+    public boolean isFull() {
+        return top == capacity - 1;
+    }
+
+    public int size() {
+        return top + 1;
+    }
+}
+```
+
+**b) Stack using a Linked List:**
+
+```java
+public class LinkedListStack {
+    private Node top; // Pointer to the top node
+
+    private class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    public LinkedListStack() {
+        top = null;
+    }
+
+    public void push(int element) {
+        Node newNode = new Node(element);
+        newNode.next = top;
+        top = newNode;
+    }
+
+    public int pop() {
+        if (isEmpty()) {
+            System.out.println("Stack Underflow");
+            return -1;
+        }
+        int element = top.data;
+        top = top.next;
+        return element;
+    }
+
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return -1;
+        }
+        return top.data;
+    }
+
+    public boolean isEmpty() {
+        return top == null;
+    }
+}
+```
+
+**3. Common Stack Algorithms**
+
+Here are some classic algorithms that utilize stacks:
+
+* **Expression Evaluation (Postfix/Reverse Polish Notation):** Stacks are crucial for evaluating mathematical expressions written in postfix notation.  The algorithm involves processing the expression from right to left, using the stack to hold operands and perform operations.
+
+* **Parentheses Matching:**  Stacks can efficiently determine if parentheses in an expression are balanced.  When an opening parenthesis is encountered, it's pushed onto the stack.  When a closing parenthesis is encountered, the top element is popped. If the popped element matches the closing parenthesis, the expression is balanced so far.
+
+* **Depth-First Search (DFS):**  DFS algorithms often use a stack to keep track of the nodes to visit.  The stack stores the nodes that have been visited but not yet fully explored.
+
+* **Tower of Hanoi:** This classic puzzle can be solved using a stack to manage the movement of disks.
+
+* **Undo/Redo Functionality:**  Many applications (text editors, graphics programs) use stacks to implement undo/redo features.
+
+**4. Example: Parentheses Matching**
+
+```java
+public class ParenthesesMatcher {
+    public static boolean isBalanced(String expression) {
+        java.util.Stack<Character> stack = new java.util.Stack<>();
+
+        for (char c : expression.toCharArray()) {
+            if (c == '(' || c == '[' || c == '{') {
+                stack.push(c);
+            } else if (c == ')' || c == ']' || c == '}') {
+                if (stack.isEmpty()) {
+                    return false; // Unmatched closing parenthesis
+                }
+                char top = stack.pop();
+                if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{')) {
+                    return false; // Mismatched parentheses
+                }
+            }
+        }
+
+        return stack.isEmpty(); // True if all parentheses were matched
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Is '([]{})' balanced? " + isBalanced("([]{})")); // true
+        System.out.println("Is '([)]' balanced? " + isBalanced("([)]")); // false
+    }
+}
+```
+
+**Key Considerations:**
+
+* **Time Complexity:**
+  * `push()`: O(1)
+  * `pop()`: O(1)
+  * `peek()`: O(1)
+  * `isEmpty()`: O(1)
+  * `size()`: O(1)
+
+* **Choosing an Implementation:**  Arrays are often preferred for their simplicity and efficiency, especially when the stack's capacity is known in advance. Linked lists can be more flexible if the stack's size is not fixed.
+
+* **Error Handling:**  Always include checks for stack overflow (when the stack is full) and stack underflow (when the stack is empty) to prevent unexpected behavior.
+
+To help me give you even more targeted information, could you tell me:
+
+*   What specific stack algorithm are you interested in learning about? (e.g., expression evaluation, DFS, Hanoi Tower)
+*   Are you looking for a specific implementation (array-based or linked list)?
+*   What is your current level of understanding of data structures and algorithms?" toolExecutionRequests = null }, metadata = ChatResponseMetadata{id='null', modelName='null', tokenUsage=TokenUsage { inputTokenCount = 12, outputTokenCount = 1529, totalTokenCount = 1541 }, finishReason=null} }

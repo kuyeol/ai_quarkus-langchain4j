@@ -26,7 +26,7 @@ public class MovieDatabaseContentRetriever implements ContentRetriever {
 
     @Inject
     DataSource dataSource;
-
+    
     @Override
     public List<Content> retrieve(Query query) {
         String question = query.text();
