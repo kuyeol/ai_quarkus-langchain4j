@@ -1,3 +1,12 @@
+# 모델 적용 시 주의 사항
+
+> [!caution]
+>  사용 모델이 tool을 지원 하지 않으면 서비스기능으로 사용 불가
+>   - 단일 지시만 가능
+
+
+
+
 # first-ai-agent
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.

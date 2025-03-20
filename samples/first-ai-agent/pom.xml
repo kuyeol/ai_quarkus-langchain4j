@@ -31,7 +31,11 @@
   </dependencyManagement>
 
   <dependencies>
-
+    <dependency>
+      <groupId>io.quarkiverse.minio</groupId>
+      <artifactId>quarkus-minio</artifactId>
+      <version>3.8.1</version>
+    </dependency>
     <dependency>
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-ollama</artifactId>
@@ -66,6 +70,10 @@
       <artifactId>langchain4j</artifactId>
       <version>1.0.0-beta1</version>
       <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-openapi</artifactId>
     </dependency>
 
   </dependencies>
