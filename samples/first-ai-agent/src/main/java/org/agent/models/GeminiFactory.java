@@ -9,11 +9,10 @@ import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
 import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;
 import dev.langchain4j.model.googleai.GoogleAiGeminiStreamingChatModel;
 import jakarta.enterprise.context.ApplicationScoped;
+import org.agent.modelcatalog.GoogleModels;
 
 import java.util.Stack;
 import java.util.concurrent.CompletableFuture;
-
-import org.agent.modelcatalog.GoogleModels;
 
 @ApplicationScoped
 public class GeminiFactory
@@ -92,12 +91,11 @@ public class GeminiFactory
     return futureResponse.join();
   }
 
-
   public Stack<UserMessage> stack = new Stack<UserMessage>();
 
   private final static int MAX_MEM = 10;
 
-  public void messageTemp(UserMessage message) {
+ private void messageTemp(UserMessage message) {
 
     if (stack.size() == MAX_MEM) {
       stack.pop();
@@ -110,7 +108,6 @@ public class GeminiFactory
 
 
   public AiMessage messageForm(String message) {
-
 
     UserMessage user = UserMessage.from(message);
     messageTemp(user);
@@ -125,6 +122,4 @@ public class GeminiFactory
     return answer;
 
   }
-
-
 }

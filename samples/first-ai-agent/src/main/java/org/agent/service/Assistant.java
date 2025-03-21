@@ -23,9 +23,5 @@ public interface Assistant
   String chat(@V("topic")String topic, @V("lang") String lang , @V("msg")String msg);
 
 
-  public static void main(String[] args)
-  {
-
-  }
 
 }

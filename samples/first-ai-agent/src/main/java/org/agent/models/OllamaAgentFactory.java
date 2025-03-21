@@ -96,16 +96,6 @@ public class OllamaAgentFactory
   }
 
 
-  public static void main(String... arg)
-  {
-    ChatLanguageModel model = OllamaChatModel.builder()
-                                             .baseUrl( BASE_URL )
-                                             .modelName( MODEL_NAME )
-                                             .build();
-
-    String answer = model.chat( "List top 10 cites in Korea Order By economic level" );
-    System.out.println(MODEL_NAME +"\n"+ answer );
-  }
 
 
 }

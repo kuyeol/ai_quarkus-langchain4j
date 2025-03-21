@@ -1,6 +1,5 @@
-package org.agent.modelcatalog.minio;
+package org.agent.modelcatalog.data.minio;
 
-import jakarta.inject.Inject;
 import jakarta.ws.rs.core.MediaType;
 import java.io.File;
 import java.io.FileInputStream;

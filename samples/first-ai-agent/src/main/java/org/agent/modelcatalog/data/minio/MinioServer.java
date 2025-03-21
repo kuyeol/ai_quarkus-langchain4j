@@ -1,4 +1,4 @@
-package org.agent.modelcatalog.minio;
+package org.agent.modelcatalog.data.minio;
 
 import io.minio.GetObjectArgs;
 import io.minio.GetObjectResponse;
