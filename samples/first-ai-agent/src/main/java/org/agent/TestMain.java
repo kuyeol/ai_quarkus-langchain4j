@@ -3,18 +3,18 @@ package org.agent;
 import dev.langchain4j.data.message.UserMessage;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
 
 public class TestMain
 {
-  public static Stack<UserMessage> stack = new Stack<UserMessage>();
+  public static List<UserMessage> msgQue = new LinkedList<UserMessage>();
 
   private final static int MAX_MEM = 10;
 
   public static void main(String[] args) {
 
-    List<UserMessage> list         = new ArrayList<UserMessage>();
+    List<UserMessage> list = new ArrayList<UserMessage>();
 
     for (int i = 0; i < 15; i++) {
       list.add(UserMessage.from("dd" + i));
@@ -24,7 +24,7 @@ public class TestMain
       messageTemp(msg);
     }
 
-    for (UserMessage msg : stack) {
+    for (UserMessage msg : msgQue) {
       System.out.println(msg);
     }
 
@@ -33,10 +33,11 @@ public class TestMain
 
   private static void messageTemp(UserMessage message) {
 
-    if (stack.size() == MAX_MEM) {
-      stack.;
+    if (msgQue.size() == MAX_MEM) {
+      msgQue.remove(0);
+      messageTemp(message);
     } else {
-      stack.push(message);
+      msgQue.add(message);
     }
 
   }

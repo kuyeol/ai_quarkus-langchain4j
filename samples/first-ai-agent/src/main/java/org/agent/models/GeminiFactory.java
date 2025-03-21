@@ -4,6 +4,7 @@ import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
+import dev.langchain4j.model.chat.request.ChatRequest;
 import dev.langchain4j.model.chat.response.ChatResponse;
 import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
 import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;
@@ -11,7 +12,8 @@ import dev.langchain4j.model.googleai.GoogleAiGeminiStreamingChatModel;
 import jakarta.enterprise.context.ApplicationScoped;
 import org.agent.modelcatalog.GoogleModels;
 
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @ApplicationScoped
@@ -91,35 +93,38 @@ public class GeminiFactory
     return futureResponse.join();
   }
 
-  public Stack<UserMessage> stack = new Stack<UserMessage>();
+
+  public static List<ChatRequest> msgQue  = new LinkedList<ChatRequest>();
+  public static List<UserMessage> userQue = new LinkedList<UserMessage>();
 
   private final static int MAX_MEM = 10;
 
- private void messageTemp(UserMessage message) {
+  private static void messageTemp(UserMessage message) {
 
-    if (stack.size() == MAX_MEM) {
-      stack.pop();
+    if (msgQue.size() == MAX_MEM) {
+      userQue.remove(0);
       messageTemp(message);
     } else {
-      stack.push(message);
+      userQue.add(message);
     }
 
   }
 
-
   public AiMessage messageForm(String message) {
 
     UserMessage user = UserMessage.from(message);
+    ChatRequest msgs = ChatRequest.builder().messages(user).build();
     messageTemp(user);
 
-    AiMessage answer = geminiLite.chat(stack.toArray(new UserMessage[0])).aiMessage();
 
-
-    for (UserMessage userMessage : stack) {
-      System.out.println(userMessage);
+    //AiMessage answer = geminiLite.chat(user).aiMessage();
+    AiMessage answer2 = geminiLite.chat(userQue.toArray(new UserMessage[0])).aiMessage();
+    for (UserMessage msg : userQue) {
+      System.out.println(msg);
     }
 
-    return answer;
+
+    return answer2;
 
   }
 }
