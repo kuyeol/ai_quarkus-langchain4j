@@ -1,0 +1,85 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.agent:first-ai-agent >----------------------
+[INFO] Building first-ai-agent 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- quarkus:3.19.3:dev (default-cli) @ first-ai-agent ---
+[INFO] Invoking resources:3.3.1:resources (default-resources) @ first-ai-agent
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Invoking quarkus:3.19.3:generate-code (default) @ first-ai-agent
+[INFO] Invoking compiler:3.13.0:compile (default-compile) @ first-ai-agent
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] Invoking resources:3.3.1:testResources (default-testResources) @ first-ai-agent
+[INFO] skip non existing resourceDirectory /home/ung/Android_project/ai_quarkus-langchain4j/samples/first-ai-agent/src/test/resources
+[INFO] Invoking quarkus:3.19.3:generate-code-tests (default) @ first-ai-agent
+[INFO] Invoking compiler:3.13.0:testCompile (default-testCompile) @ first-ai-agent
+[INFO] Nothing to compile - all classes are up to date.
+Listening for transport dt_socket at address: 5005
+Press [e] to edit command line args (currently ''), [h] for more options>
+Tests paused
+Press [e] to edit command line args (currently ''), [r] to resume testing, [h] for more options>
+Press [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [h] for more options>
+2025-03-21 14:17:08,206 INFO  [org.tes.DockerClientFactory] (build-12) Testcontainers version: 1.20.6
+2025-03-21 14:17:08,398 WARN  [io.qua.res.rea.ser.dep.QuarkusServerEndpointIndexer] (build-37) Quarkus detected the use of JSON in JAX-RS method 'org.agent.ExampleResource#uploadFile' but no JSON extension has been added. Consider adding 'quarkus-rest-jackson' (recommended) or 'quarkus-rest-jsonb'.
+2025-03-21 14:17:09,077 INFO  [org.tes.doc.DockerClientProviderStrategy] (build-12) Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-03-21 14:17:09,608 INFO  [org.tes.doc.DockerClientProviderStrategy] (build-12) Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-03-21 14:17:09,609 INFO  [org.tes.DockerClientFactory] (build-12) Docker host IP address is localhost
+2025-03-21 14:17:09,622 INFO  [org.tes.DockerClientFactory] (build-12) Connected to docker: 
+  Server Version: 27.5.1
+  API Version: 1.47
+  Operating System: Ubuntu Core 22
+  Total Memory: 31952 MB
+2025-03-21 14:17:09,629 INFO  [org.tes.ima.PullPolicy] (build-12) Image pull policy will be performed by: DefaultPullPolicy()
+2025-03-21 14:17:09,630 INFO  [org.tes.uti.ImageNameSubstitutor] (build-12) Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-03-21 14:17:09,633 INFO  [org.tes.DockerClientFactory] (build-12) Checking the system...
+2025-03-21 14:17:09,633 INFO  [org.tes.DockerClientFactory] (build-12) ✔︎ Docker server version should be at least 1.6.0
+2025-03-21 14:17:09,718 INFO  [tc.min.2022-10-08T20-11-00Z] (build-12) Creating container for image: minio/minio:RELEASE.2022-10-08T20-11-00Z
+2025-03-21 14:17:09,737 INFO  [org.tes.uti.RegistryAuthLocator] (build-12) Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-03-21 14:17:09,741 INFO  [tc.tes.11.0] (build-12) Creating container for image: testcontainers/ryuk:0.11.0
+2025-03-21 14:17:09,837 INFO  [tc.tes.11.0] (build-12) Container testcontainers/ryuk:0.11.0 is starting: 5613897d66ec12ba8ac09f20e264d4e79b27697b539890e0c72a72b651b0f671
+2025-03-21 14:17:11,546 INFO  [tc.tes.11.0] (build-12) Container testcontainers/ryuk:0.11.0 started in PT1.805094024S
+2025-03-21 14:17:11,652 WARN  [tc.min.2022-10-08T20-11-00Z] (build-12) Reuse was requested but the environment does not support the reuse of containers
+To enable reuse of containers, you must set 'testcontainers.reuse.enable=true' in a file located at /home/ung/.testcontainers.properties
+2025-03-21 14:17:11,711 INFO  [tc.min.2022-10-08T20-11-00Z] (build-12) Container minio/minio:RELEASE.2022-10-08T20-11-00Z is starting: f3341854a479077a0dedbb431f7065ef7369cb6909953315c91432b088353716
+2025-03-21 14:17:12,010 INFO  [org.tes.con.wai.str.HttpWaitStrategy] (build-12) /happy_villani: Waiting for 60 seconds for URL: http://localhost:32793/minio/health/live (where port 32793 maps to container port 9000)
+2025-03-21 14:17:13,024 INFO  [tc.min.2022-10-08T20-11-00Z] (build-12) Container minio/minio:RELEASE.2022-10-08T20-11-00Z started in PT3.305811556S
+2025-03-21 14:17:13,026 INFO  [io.qua.min.cli.dep.dev.DevServicesMinioProcessor] (build-12) Dev Services for Minio started on localhost
+2025-03-21 14:17:13,026 INFO  [io.qua.min.cli.dep.dev.DevServicesMinioProcessor] (build-12) Other Quarkus applications in dev mode will find the instance automatically. For Quarkus applications in production mode, you can connect to this by starting your application with -Dquarkus.minio.host=localhost -Dquarkus.minio.secure=false -Dquarkus.minio.port=9000
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2025-03-21 14:17:13,581 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.devservices.secure" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 14:17:13,582 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.devservices.host" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 14:17:13,582 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.console" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 14:17:13,797 INFO  [io.quarkus] (Quarkus Main Thread) first-ai-agent 1.0-SNAPSHOT on JVM (powered by Quarkus 3.19.3) started in 6.978s. Listening on: http://localhost:3030
+2025-03-21 14:17:13,798 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2025-03-21 14:17:13,799 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, minio-client, rest, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2025-03-21 14:17:13,805 INFO  [io.quarkus] (Quarkus Main Thread) first-ai-agent stopped in 0.005s
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.agent:first-ai-agent >----------------------
+[INFO] Building first-ai-agent 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- quarkus:3.19.3:dev (default-cli) @ first-ai-agent ---
+[INFO] Invoking resources:3.3.1:resources (default-resources) @ first-ai-agent
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Invoking quarkus:3.19.3:generate-code (default) @ first-ai-agent
+[INFO] Invoking compiler:3.13.0:compile (default-compile) @ first-ai-agent
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] Invoking resources:3.3.1:testResources (default-testResources) @ first-ai-agent
+[INFO] skip non existing resourceDirectory /home/ung/Android_project/ai_quarkus-langchain4j/samples/first-ai-agent/src/test/resources
+[INFO] Invoking quarkus:3.19.3:generate-code-tests (default) @ first-ai-agent
+[INFO] Invoking compiler:3.13.0:testCompile (default-testCompile) @ first-ai-agent
+[INFO] Nothing to compile - all classes are up to date.
+Listening for transport dt_socket at address: 5005
+Press [e] to edit command line args (currently ''), [h] for more options>
+Tests paused
+Press [e] to edit command line args (currently ''), [r] to resume testing, [h] for more options>
+Press [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [h] for more options>
+2025-03-21 14:19:50,390 INFO  [org.tes.DockerClientFactory] (build-44) Testcontainers version: 1.20.6
+2025-03-21 14:19:50,542 INFO  [org.tes.doc.DockerClientProviderStrategy] (build-44) Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
