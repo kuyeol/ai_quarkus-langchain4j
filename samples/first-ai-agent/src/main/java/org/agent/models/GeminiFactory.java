@@ -14,7 +14,9 @@ import org.agent.modelcatalog.GoogleModels;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 @ApplicationScoped
 public class GeminiFactory
@@ -116,15 +118,19 @@ public class GeminiFactory
     ChatRequest msgs = ChatRequest.builder().messages(user).build();
     messageTemp(user);
 
+    Set<UserMessage> history = userQue.stream().collect(Collectors.toSet());
+    AiMessage        answer  = geminiLite.chat(history.toArray(new UserMessage[0])).aiMessage();
 
-    //AiMessage answer = geminiLite.chat(user).aiMessage();
-    AiMessage answer2 = geminiLite.chat(userQue.toArray(new UserMessage[0])).aiMessage();
+
+    // AiMessage answer2 = geminiLite.chat(userQue.toArray(new UserMessage[0])).aiMessage();
+
+
     for (UserMessage msg : userQue) {
       System.out.println(msg);
     }
 
 
-    return answer2;
+    return answer;
 
   }
 }
