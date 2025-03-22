@@ -1,4 +1,4 @@
-package io.quarkiverse.langchain4j.sample.chatbot;
+package org.agent.modelcatalog.data.embeddingstore;
 
 import java.util.Collection;
 
@@ -11,7 +11,7 @@ import org.hibernate.mapping.PersistentClass;
 import org.hibernate.mapping.Table;
 import org.hibernate.service.spi.SessionFactoryServiceRegistry;
 
-public class  MovieTableIntegrator implements Integrator {
+public class MovieTableIntegrator implements Integrator {
 
     static volatile String schemaStr = "";
 
