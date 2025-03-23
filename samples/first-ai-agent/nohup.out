@@ -83,3 +83,168 @@ Press [e] to edit command line args (currently ''), [r] to resume testing, [h] f
 Press [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [h] for more options>
 2025-03-21 14:19:50,390 INFO  [org.tes.DockerClientFactory] (build-44) Testcontainers version: 1.20.6
 2025-03-21 14:19:50,542 INFO  [org.tes.doc.DockerClientProviderStrategy] (build-44) Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[INFO] Scanning for projects...
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.agent:first-ai-agent >----------------------
+[INFO] Building first-ai-agent 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- quarkus:3.19.3:dev (default-cli) @ first-ai-agent ---
+[INFO] Invoking resources:3.3.1:resources (default-resources) @ first-ai-agent
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Invoking quarkus:3.19.3:generate-code (default) @ first-ai-agent
+[INFO] Invoking compiler:3.13.0:compile (default-compile) @ first-ai-agent
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 16 source files with javac [debug parameters release 21] to target/classes
+[INFO] Invoking resources:3.3.1:testResources (default-testResources) @ first-ai-agent
+[INFO] skip non existing resourceDirectory /home/ung/Android_project/ai_quarkus-langchain4j/samples/first-ai-agent/src/test/resources
+[INFO] Invoking quarkus:3.19.3:generate-code-tests (default) @ first-ai-agent
+[INFO] Invoking compiler:3.13.0:testCompile (default-testCompile) @ first-ai-agent
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.agent:first-ai-agent >----------------------
+[INFO] Building first-ai-agent 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- quarkus:3.19.3:dev (default-cli) @ first-ai-agent ---
+[INFO] Invoking resources:3.3.1:resources (default-resources) @ first-ai-agent
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Invoking quarkus:3.19.3:generate-code (default) @ first-ai-agent
+[INFO] Invoking compiler:3.13.0:compile (default-compile) @ first-ai-agent
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 16 source files with javac [debug parameters release 21] to target/classes
+[INFO] Invoking resources:3.3.1:testResources (default-testResources) @ first-ai-agent
+[INFO] skip non existing resourceDirectory /home/ung/Android_project/ai_quarkus-langchain4j/samples/first-ai-agent/src/test/resources
+[INFO] Invoking quarkus:3.19.3:generate-code-tests (default) @ first-ai-agent
+[INFO] Invoking compiler:3.13.0:testCompile (default-testCompile) @ first-ai-agent
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target/test-classes
+Listening for transport dt_socket at address: 5005
+Press [e] to edit command line args (currently ''), [h] for more options>
+Tests paused
+Press [e] to edit command line args (currently ''), [r] to resume testing, [h] for more options>
+Press [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [h] for more options>
+2025-03-21 23:14:41,544 INFO  [org.tes.DockerClientFactory] (build-13) Testcontainers version: 1.20.6
+2025-03-21 23:14:41,732 INFO  [org.tes.doc.DockerClientProviderStrategy] (build-13) Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-03-21 23:14:41,943 WARN  [io.qua.res.rea.ser.dep.QuarkusServerEndpointIndexer] (build-49) Quarkus detected the use of JSON in JAX-RS method 'org.agent.ExampleResource#uploadFile' but no JSON extension has been added. Consider adding 'quarkus-rest-jackson' (recommended) or 'quarkus-rest-jsonb'.
+2025-03-21 23:14:42,026 INFO  [org.tes.doc.DockerClientProviderStrategy] (build-13) Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-03-21 23:14:42,027 INFO  [org.tes.DockerClientFactory] (build-13) Docker host IP address is localhost
+2025-03-21 23:14:42,048 INFO  [org.tes.DockerClientFactory] (build-13) Connected to docker: 
+  Server Version: 27.5.1
+  API Version: 1.47
+  Operating System: Ubuntu Core 22
+  Total Memory: 31952 MB
+2025-03-21 23:14:42,061 INFO  [org.tes.ima.PullPolicy] (build-13) Image pull policy will be performed by: DefaultPullPolicy()
+2025-03-21 23:14:42,064 INFO  [org.tes.uti.ImageNameSubstitutor] (build-13) Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-03-21 23:14:42,069 INFO  [org.tes.DockerClientFactory] (build-13) Checking the system...
+2025-03-21 23:14:42,069 INFO  [org.tes.DockerClientFactory] (build-13) ✔︎ Docker server version should be at least 1.6.0
+2025-03-21 23:14:42,109 INFO  [io.qua.dev.com.ContainerLocator] (build-13) Dev Services container found: 72ae4998612c600f772e351b492b5d3f7785a8df77b2f41bb0f98d85ba3c8c53 (minio/minio:RELEASE.2022-10-08T20-11-00Z). Connecting to: localhost:32799.
+2025-03-21 23:14:42,143 INFO  [tc.doc.io/postgres:17] (build-22) Creating container for image: docker.io/postgres:17
+2025-03-21 23:14:42,171 INFO  [org.tes.uti.RegistryAuthLocator] (build-22) Credential helper/store (docker-credential-desktop) does not have credentials for docker.io
+2025-03-21 23:14:42,286 INFO  [tc.doc.io/postgres:17] (build-22) Reusing container with ID: 622380ac16ef637f3e43a872c211a8616309eb2290075e8351d80f903831e40e and hash: 72792016ffccc98be332a4ebd9a5c669ba69b8bc
+2025-03-21 23:14:42,287 INFO  [tc.doc.io/postgres:17] (build-22) Reusing existing container (622380ac16ef637f3e43a872c211a8616309eb2290075e8351d80f903831e40e) and not creating a new one
+2025-03-21 23:14:42,633 INFO  [tc.doc.io/postgres:17] (build-22) Container docker.io/postgres:17 started in PT0.489965891S
+2025-03-21 23:14:42,634 INFO  [tc.doc.io/postgres:17] (build-22) Container is started (JDBC URL: jdbc:postgresql://localhost:32801/quarkus?loggerLevel=OFF)
+2025-03-21 23:14:42,635 INFO  [io.qua.dev.pos.dep.PostgresqlDevServicesProcessor] (build-22) Dev Services for PostgreSQL started.
+2025-03-21 23:14:42,636 INFO  [io.qua.dat.dep.dev.DevServicesDatasourceProcessor] (build-22) Dev Services for default datasource (postgresql) started - container ID is 622380ac16ef
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2025-03-21 23:14:44,351 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.devservices.secure" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:14:44,351 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.devservices.host" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:14:44,351 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.console" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:14:44,709 INFO  [io.quarkus] (Quarkus Main Thread) first-ai-agent 1.0-SNAPSHOT on JVM (powered by Quarkus 3.19.3) started in 4.571s. Listening on: http://0.0.0.0:3030
+2025-03-21 23:14:44,710 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2025-03-21 23:14:44,711 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, jdbc-postgresql, minio-client, narayana-jta, rest, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.agent:first-ai-agent >----------------------
+[INFO] Building first-ai-agent 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- quarkus:3.19.3:dev (default-cli) @ first-ai-agent ---
+[INFO] Invoking resources:3.3.1:resources (default-resources) @ first-ai-agent
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Invoking quarkus:3.19.3:generate-code (default) @ first-ai-agent
+[INFO] Invoking compiler:3.13.0:compile (default-compile) @ first-ai-agent
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 16 source files with javac [debug parameters release 21] to target/classes
+[INFO] Invoking resources:3.3.1:testResources (default-testResources) @ first-ai-agent
+[INFO] skip non existing resourceDirectory /home/ung/Android_project/ai_quarkus-langchain4j/samples/first-ai-agent/src/test/resources
+[INFO] Invoking quarkus:3.19.3:generate-code-tests (default) @ first-ai-agent
+[INFO] Invoking compiler:3.13.0:testCompile (default-testCompile) @ first-ai-agent
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target/test-classes
+Debugger failed to attach: handshake failed - connection prematurally closed
+[WARNING] [io.quarkus.deployment.dev.DevModeCommandLineBuilder] Changed debug port to 42845 because of a port conflict
+Listening for transport dt_socket at address: 42845
+Press [e] to edit command line args (currently ''), [h] for more options>
+Tests paused
+Press [e] to edit command line args (currently ''), [r] to resume testing, [h] for more options>
+Press [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [h] for more options>
+2025-03-21 23:15:29,638 INFO  [org.tes.DockerClientFactory] (build-34) Testcontainers version: 1.20.6
+2025-03-21 23:15:29,804 INFO  [org.tes.doc.DockerClientProviderStrategy] (build-34) Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-03-21 23:15:29,968 WARN  [io.qua.res.rea.ser.dep.QuarkusServerEndpointIndexer] (build-40) Quarkus detected the use of JSON in JAX-RS method 'org.agent.ExampleResource#uploadFile' but no JSON extension has been added. Consider adding 'quarkus-rest-jackson' (recommended) or 'quarkus-rest-jsonb'.
+2025-03-21 23:15:30,090 INFO  [org.tes.doc.DockerClientProviderStrategy] (build-34) Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-03-21 23:15:30,092 INFO  [org.tes.DockerClientFactory] (build-34) Docker host IP address is localhost
+2025-03-21 23:15:30,107 INFO  [org.tes.DockerClientFactory] (build-34) Connected to docker: 
+  Server Version: 27.5.1
+  API Version: 1.47
+  Operating System: Ubuntu Core 22
+  Total Memory: 31952 MB
+2025-03-21 23:15:30,115 INFO  [org.tes.ima.PullPolicy] (build-34) Image pull policy will be performed by: DefaultPullPolicy()
+2025-03-21 23:15:30,117 INFO  [org.tes.uti.ImageNameSubstitutor] (build-34) Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-03-21 23:15:30,121 INFO  [org.tes.DockerClientFactory] (build-34) Checking the system...
+2025-03-21 23:15:30,121 INFO  [org.tes.DockerClientFactory] (build-34) ✔︎ Docker server version should be at least 1.6.0
+2025-03-21 23:15:30,143 INFO  [io.qua.dev.com.ContainerLocator] (build-34) Dev Services container found: 72ae4998612c600f772e351b492b5d3f7785a8df77b2f41bb0f98d85ba3c8c53 (minio/minio:RELEASE.2022-10-08T20-11-00Z). Connecting to: localhost:32799.
+2025-03-21 23:15:30,164 INFO  [tc.doc.io/postgres:17] (build-31) Creating container for image: docker.io/postgres:17
+2025-03-21 23:15:30,178 INFO  [org.tes.uti.RegistryAuthLocator] (build-31) Credential helper/store (docker-credential-desktop) does not have credentials for docker.io
+2025-03-21 23:15:30,233 INFO  [tc.doc.io/postgres:17] (build-31) Reusing container with ID: 622380ac16ef637f3e43a872c211a8616309eb2290075e8351d80f903831e40e and hash: 72792016ffccc98be332a4ebd9a5c669ba69b8bc
+2025-03-21 23:15:30,234 INFO  [tc.doc.io/postgres:17] (build-31) Reusing existing container (622380ac16ef637f3e43a872c211a8616309eb2290075e8351d80f903831e40e) and not creating a new one
+2025-03-21 23:15:30,371 INFO  [tc.doc.io/postgres:17] (build-31) Container docker.io/postgres:17 started in PT0.207345065S
+2025-03-21 23:15:30,372 INFO  [tc.doc.io/postgres:17] (build-31) Container is started (JDBC URL: jdbc:postgresql://localhost:32801/quarkus?loggerLevel=OFF)
+2025-03-21 23:15:30,372 INFO  [io.qua.dev.pos.dep.PostgresqlDevServicesProcessor] (build-31) Dev Services for PostgreSQL started.
+2025-03-21 23:15:30,373 INFO  [io.qua.dat.dep.dev.DevServicesDatasourceProcessor] (build-31) Dev Services for default datasource (postgresql) started - container ID is 622380ac16ef
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2025-03-21 23:15:30,958 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.devservices.secure" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:30,958 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.devservices.host" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:30,958 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.console" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:31,203 ERROR [io.qua.run.Application] (Quarkus Main Thread) Port 3030 seems to be in use by another process. Quarkus may already be running or the port is used by another application.
+2025-03-21 23:15:31,204 WARN  [io.qua.run.Application] (Quarkus Main Thread) Use 'ss -anop | grep 3030' or 'netstat -anop | grep 3030' to identify the process occupying the port.
+2025-03-21 23:15:31,204 WARN  [io.qua.run.Application] (Quarkus Main Thread) You can try to kill it with 'kill -9 <pid>'.
+Press [space] to restart, [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [h] for more options>
+2025-03-21 23:15:31,230 WARN  [io.qua.config] (main) Unrecognized configuration key "quarkus.minio.devservices.secure" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:31,230 WARN  [io.qua.config] (main) Unrecognized configuration key "quarkus.minio.devservices.secure" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:31,231 WARN  [io.qua.config] (main) Unrecognized configuration key "quarkus.minio.devservices.host" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:31,231 WARN  [io.qua.config] (main) Unrecognized configuration key "quarkus.minio.devservices.host" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:31,232 WARN  [io.qua.config] (main) Unrecognized configuration key "quarkus.minio.console" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:31,232 WARN  [io.qua.config] (main) Unrecognized configuration key "quarkus.minio.console" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:39,372 INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Restarting quarkus due to changes in AssistService.class, FormDataFile.class, BucketWrite.class, TestMain.class, BucketRead.class, PgVectorClient.class, OllamaAgentFactory.class, Assistant.class, adsf.class, GeminiFactory$1.class, PgVectorStore.class, GeminiFactory.class, MinioServer.class, ExampleResource.class, AiMemory.class, AssistService$Topic.class, OllamaAgentFactory$1.class, PgVectorClient$PgVectorClientbuilder.class, GoogleModels.class, MainExe.class.
+2025-03-21 23:15:39,381 INFO  [io.quarkus] (Quarkus Main Thread) first-ai-agent stopped in 0.007s
+2025-03-21 23:15:39,656 WARN  [io.qua.res.rea.ser.dep.QuarkusServerEndpointIndexer] (build-19) Quarkus detected the use of JSON in JAX-RS method 'org.agent.ExampleResource#uploadFile' but no JSON extension has been added. Consider adding 'quarkus-rest-jackson' (recommended) or 'quarkus-rest-jsonb'.
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2025-03-21 23:15:39,894 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.devservices.secure" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:39,894 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.devservices.host" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:39,894 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.minio.console" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-03-21 23:15:39,910 INFO  [io.quarkus] (Quarkus Main Thread) first-ai-agent 1.0-SNAPSHOT on JVM (powered by Quarkus 3.19.3) started in 0.526s. Listening on: http://0.0.0.0:3030
+2025-03-21 23:15:39,910 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2025-03-21 23:15:39,911 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, jdbc-postgresql, minio-client, narayana-jta, rest, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2025-03-21 23:15:39,911 INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload total time: 0.542s 
+Debugger failed to attach: handshake failed - connection prematurally closed
+Debugger failed to attach: handshake failed - connection prematurally closed
+Debugger failed to attach: handshake failed - connection prematurally closed
+2025-03-21 23:18:48,296 INFO  [io.quarkus] (Shutdown thread) first-ai-agent stopped in 0.006s
+Press [e] to edit command line args (currently ''), [h] for more options>

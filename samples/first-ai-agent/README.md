@@ -9,7 +9,9 @@
 >  사용 모델이 tool을 지원 하지 않으면 서비스기능으로 사용 불가
 >   - 단일 지시만 가능
 
+# idea
 
+- ai-language programming
 
 
 # first-ai-agent

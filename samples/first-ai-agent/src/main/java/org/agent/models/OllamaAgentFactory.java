@@ -16,33 +16,72 @@ import java.util.concurrent.CompletableFuture;
 public class OllamaAgentFactory
 {
 
-  static String MODEL_NAME = "gemma3:4b"; // try other local ollama model names
-
+  static String MODEL_GEMMA3 = "gemma3:4b"; // try other local ollama model names
+  static String MODEL_LLAMA3 = "llama3.2";
   static String BASE_URL = "http://182.218.135.247:11434";
 
   private final ChatLanguageModel languageModel;
+  static String MODEL_QWEN  = "qwen2.5";
+  static String MODEL_CODER = "qwen2.5-coder";
+  private final ChatLanguageModel qwen;
 
   private final StreamingChatLanguageModel streamModel;
-
+  private final ChatLanguageModel coder;
+  private final ChatLanguageModel llama;
 
   public OllamaAgentFactory()
   {
+
+    this.llama = OllamaChatModel.builder()
+                                .baseUrl(BASE_URL)
+                                .modelName(MODEL_LLAMA3)
+                                .temperature(0.0)
+                                .timeout(Duration.ofSeconds(60000))
+                                .build();
+
+    this.qwen = OllamaChatModel.builder()
+                               .baseUrl(BASE_URL)
+                               .modelName(MODEL_CODER)
+                               .temperature(0.1)
+                               .timeout(Duration.ofSeconds(60000))
+                               .build();
+
+
+    this.coder = OllamaChatModel.builder()
+                                .baseUrl(BASE_URL)
+                                .modelName(MODEL_QWEN)
+                                .temperature(0.1)
+                                .timeout(Duration.ofSeconds(60000))
+                                .build();
+
     this.languageModel = OllamaChatModel.builder()
-                                        .baseUrl( BASE_URL )
-                                        .modelName( MODEL_NAME )
+                                        .baseUrl( BASE_URL ).modelName(MODEL_GEMMA3)
                                         .temperature( 0.2 )
                                         .timeout( Duration.ofSeconds( 60000 ) )
                                         .build();
 
     this.streamModel = OllamaStreamingChatModel.builder()
-                                               .baseUrl( BASE_URL )
-                                               .modelName( MODEL_NAME )
+                                               .baseUrl( BASE_URL ).modelName(MODEL_GEMMA3)
                                                .temperature( 0.0 )
                                                .build();
   }
 
   public ChatLanguageModel getAi(){
     return languageModel;
+  }
+
+  public ChatLanguageModel providesModel(String modelName) {
+
+    switch (modelName) {
+      case "qwen":
+        return qwen;
+      case "coder":
+        return coder;
+      default:
+        return llama;
+    }
+
+
   }
 
 
